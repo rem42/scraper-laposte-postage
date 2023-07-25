@@ -7,8 +7,7 @@ class Orders
     public function __construct(
         private readonly Order $order = new Order(
         )
-    ) {
-    }
+    ) {}
 
     public function getOrder(): Order
     {

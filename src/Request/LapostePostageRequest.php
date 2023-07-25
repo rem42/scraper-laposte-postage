@@ -5,12 +5,25 @@ namespace Scraper\ScraperLaPostePostage\Request;
 use Scraper\Scraper\Attribute\Method;
 use Scraper\Scraper\Attribute\Scheme;
 use Scraper\Scraper\Attribute\Scraper;
+use Scraper\Scraper\Request\RequestHeaders;
 use Scraper\Scraper\Request\ScraperRequest;
 
 #[Scraper(method: Method::POST, scheme: Scheme::HTTPS, host: 'apim-gw-vente.extra.laposte.fr', path: '/{postage}/v1/')]
-class LapostePostageRequest extends ScraperRequest
+abstract class LapostePostageRequest extends ScraperRequest implements RequestHeaders
 {
     private bool $sandbox = false;
+
+    public function __construct(
+        protected readonly string $token
+    ) {}
+
+    public function getHeaders(): array
+    {
+        return [
+            'Authorization' => 'Bearer ' . $this->token,
+            'Content-Type' => 'application/json',
+        ];
+    }
 
     public function getPostage(): string
     {
