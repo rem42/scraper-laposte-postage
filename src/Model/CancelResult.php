@@ -7,4 +7,6 @@ class CancelResult
     public string $status;
     public \DateTimeInterface $cancelRequestDate;
     public string $cancellationId;
+    /** @var array<int, CancelProduct> */
+    public array $products;
 }
