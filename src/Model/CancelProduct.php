@@ -8,7 +8,6 @@ class CancelProduct
     public string $status;
     /** @var array<int, Error> */
     public array $errors;
-    // public ResultInfo $resultInfo;
     public string $services;
     public string $soCode;
     public string $asCode;
