@@ -3,11 +3,11 @@
 namespace Scraper\ScraperLaPostePostage\Request;
 
 use Scraper\Scraper\Attribute\Scraper;
+use Scraper\Scraper\Request\RequestBodyJson;
 use Scraper\Scraper\Request\RequestException;
-use Scraper\Scraper\Request\RequestQuery;
 
 #[Scraper(path: 'orders/cancel')]
-class CancelOrderRequest extends LapostePostageRequest implements RequestQuery, RequestException
+class CancelOrderRequest extends LapostePostageRequest implements RequestBodyJson, RequestException
 {
     public function __construct(
         string $token,
@@ -21,7 +21,7 @@ class CancelOrderRequest extends LapostePostageRequest implements RequestQuery, 
         return false;
     }
 
-    public function getQuery(): array
+    public function getJson(): array
     {
         return [
             'orderId' => $this->orderId,
