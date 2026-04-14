@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -22,6 +24,7 @@ class ProductOptions
     public function setWeight(?int $weight): self
     {
         $this->weight = $weight;
+
         return $this;
     }
 
@@ -38,6 +41,7 @@ class ProductOptions
     public function setDeliveryTrackingFlag(bool $deliveryTrackingFlag): self
     {
         $this->deliveryTrackingFlag = $deliveryTrackingFlag;
+
         return $this;
     }
 
@@ -49,6 +53,7 @@ class ProductOptions
     public function setServices(array $services): self
     {
         $this->services = $services;
+
         return $this;
     }
 }

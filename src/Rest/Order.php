@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -22,6 +24,7 @@ class Order
     public function setCustPurchaseOrderNumber(?string $custPurchaseOrderNumber): self
     {
         $this->custPurchaseOrderNumber = $custPurchaseOrderNumber;
+
         return $this;
     }
 

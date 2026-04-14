@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Request;
 
@@ -11,7 +13,7 @@ class CancelOrderRequest extends LapostePostageRequest implements RequestBodyJso
 {
     public function __construct(
         string $token,
-        protected readonly string $orderId
+        protected readonly string $orderId,
     ) {
         parent::__construct($token);
     }

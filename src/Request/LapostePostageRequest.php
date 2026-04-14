@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Request;
 
@@ -14,7 +16,7 @@ abstract class LapostePostageRequest extends ScraperRequest implements RequestHe
     private bool $sandbox = false;
 
     public function __construct(
-        protected readonly string $token
+        protected readonly string $token,
     ) {}
 
     public function getHeaders(): array
@@ -30,12 +32,14 @@ abstract class LapostePostageRequest extends ScraperRequest implements RequestHe
         if ($this->sandbox) {
             return 'postageDiscover';
         }
+
         return 'postage';
     }
 
     public function setSandbox(bool $sandbox): self
     {
         $this->sandbox = $sandbox;
+
         return $this;
     }
 }

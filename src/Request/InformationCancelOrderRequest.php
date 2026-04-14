@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Request;
 
@@ -11,7 +13,7 @@ class InformationCancelOrderRequest extends LapostePostageRequest implements Req
 {
     public function __construct(
         string $token,
-        protected readonly string $cancellationId
+        protected readonly string $cancellationId,
     ) {
         parent::__construct($token);
     }

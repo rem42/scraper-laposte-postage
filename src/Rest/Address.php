@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -21,6 +23,7 @@ class Address
     public function setName1(string $name1): self
     {
         $this->name1 = $name1;
+
         return $this;
     }
 
@@ -32,6 +35,7 @@ class Address
     public function setAdd2(?string $add2): self
     {
         $this->add2 = $add2;
+
         return $this;
     }
 
@@ -43,6 +47,7 @@ class Address
     public function setAdd3(?string $add3): self
     {
         $this->add3 = $add3;
+
         return $this;
     }
 
@@ -54,6 +59,7 @@ class Address
     public function setAdd4(string $add4): self
     {
         $this->add4 = $add4;
+
         return $this;
     }
 
@@ -65,6 +71,7 @@ class Address
     public function setAdd5(?string $add5): self
     {
         $this->add5 = $add5;
+
         return $this;
     }
 
@@ -76,6 +83,7 @@ class Address
     public function setZipcode(string $zipcode): self
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -87,6 +95,7 @@ class Address
     public function setTown(string $town): self
     {
         $this->town = $town;
+
         return $this;
     }
 
@@ -98,6 +107,7 @@ class Address
     public function setCountryCode(string $countryCode): self
     {
         $this->countryCode = $countryCode;
+
         return $this;
     }
 }

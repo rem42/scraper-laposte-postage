@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Model;
 
@@ -6,6 +8,7 @@ class CancelProduct
 {
     public string $itemId;
     public string $status;
+
     /** @var array<int, Error> */
     public array $errors;
     public string $services;

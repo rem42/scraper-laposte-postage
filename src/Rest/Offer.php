@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -6,6 +8,7 @@ class Offer
 {
     private string $offerCode;
     private MasterOutputOptions $masterOutputOptions;
+
     /** @var array<int, Product> */
     private array $products = [];
 
@@ -22,6 +25,7 @@ class Offer
     public function setOfferCode(string $offerCode): self
     {
         $this->offerCode = $offerCode;
+
         return $this;
     }
 
@@ -41,6 +45,7 @@ class Offer
     public function addProduct(Product $product): self
     {
         $this->products[] = $product;
+
         return $this;
     }
 }

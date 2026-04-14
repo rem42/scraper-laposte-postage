@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -14,6 +16,7 @@ class MasterOutputOptions
     public function setVisualFormatCode(string $visualFormatCode): self
     {
         $this->visualFormatCode = $visualFormatCode;
+
         return $this;
     }
 }

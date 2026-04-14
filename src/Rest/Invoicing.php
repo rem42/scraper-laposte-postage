@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -23,6 +25,7 @@ class Invoicing
     public function setCustAccNumber(string $custAccNumber): self
     {
         $this->custAccNumber = $custAccNumber;
+
         return $this;
     }
 
@@ -34,6 +37,7 @@ class Invoicing
     public function setCustInvoice(string $custInvoice): self
     {
         $this->custInvoice = $custInvoice;
+
         return $this;
     }
 
@@ -45,6 +49,7 @@ class Invoicing
     public function setContractNumber(string $contractNumber): self
     {
         $this->contractNumber = $contractNumber;
+
         return $this;
     }
 

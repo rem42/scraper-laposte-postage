@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -16,6 +18,7 @@ class ClientReference
     public function setCref1(?string $cref1): self
     {
         $this->cref1 = $cref1;
+
         return $this;
     }
 
@@ -27,6 +30,7 @@ class ClientReference
     public function setCref2(?string $cref2): self
     {
         $this->cref2 = $cref2;
+
         return $this;
     }
 
@@ -38,6 +42,7 @@ class ClientReference
     public function setProductLabel(?string $productLabel): self
     {
         $this->productLabel = $productLabel;
+
         return $this;
     }
 }

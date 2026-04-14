@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
@@ -21,6 +23,7 @@ class Contact
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
         return $this;
     }
 
@@ -32,6 +35,7 @@ class Contact
     public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
         return $this;
     }
 

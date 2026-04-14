@@ -1,10 +1,13 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scraper\ScraperLaPostePostage\Rest;
 
 class Product
 {
     private string $productCode;
+
     /** @var array<int, ProductOptions> */
     private ProductOptions $productOptions;
     private Contact $sender;
@@ -25,6 +28,7 @@ class Product
     public function setProductCode(string $productCode): self
     {
         $this->productCode = $productCode;
+
         return $this;
     }
 
@@ -36,6 +40,7 @@ class Product
     public function setProductOptions(ProductOptions $productOptions): self
     {
         $this->productOptions = $productOptions;
+
         return $this;
     }
 
